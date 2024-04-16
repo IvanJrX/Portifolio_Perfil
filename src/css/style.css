@@ -1,0 +1,226 @@
+:root {
+    --font-principal: "Poppins", sans-serif;
+    --font-secundaria: "Raleway", sans-serif;
+}
+
+html {
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-principal);
+    margin: 0 auto;
+    max-width: 1120px;
+    background-color: #2f94d1;
+    background-image: linear-gradient(225deg, #2f94d1 0%, #172b89 46%, #3c317f 100%);    
+    background-size: 120% 120%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.cabecalho .logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 55px;
+    font-family: var(--font-secundaria);
+    font-size: 30px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.cabecalho a:hover .logo {
+    color: #9443d8;
+    border: 2px solid #9443d8;
+}
+
+.cabecalho .menu li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover {
+    background-color: #9443d8;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.home {
+    display: flex;
+    min-height: calc(100vh - 125px);
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1 {
+    font-family: var(--font-secundaria);
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.home .informacoes p {
+    font-family: var(--font-secundaria);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes_sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes_sociais a i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes_sociais a i:hover {
+    color: #5326CD;
+    border: 1px solid #5326CD;
+    transform: scale(1.1);
+}
+
+.home .container_foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container_foto img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .foto.sombra_interna {
+    background: linear-gradient(43deg, #195477 0%, #263b96 46%, #302485 100%);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.projetos {
+    padding: 70px 0;
+}
+
+.projetos .titulo {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container_projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo {
+    display: block;
+}
+
+.projetos .projeto img {
+    height: 100%;
+}
+
+.projetos .projeto h3 {
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes_projeto {
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container_projetos .projeto:hover .informacoes_projeto {
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.projetos .btn_mostrar_projetos {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn_mostrar_projetos:hover {
+    background-color: #364392;
+    transition: 0.3s;
+}
+
+.projetos .btn_mostrar_projetos.remover {
+    display: none;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
